@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:display="com.frankjania.twitteryear.display.*"
+	xmlns:timeline="com.frankjania.twitteryear.timeline.*"
+	pageTitle="A Year in Twitter Trends"
+	width="1000" height="700"
+	styleName="plain" backgroundColor="0xffffff"
+	verticalGap="0" horizontalGap="0"
+	>
+	<mx:Style>
+		@font-face {
+			src:local("Teen");
+			fontFamily: Teen;
+			advancedAntiAliasing: true;
+		}
+		@font-face {
+			src:local("Reprobate");
+			fontFamily: Reprobate;
+			advancedAntiAliasing: true;
+		}
+		@font-face {
+			src:local("Verdana");
+			fontFamily: Verdana;
+			advancedAntiAliasing: true;
+		}
+    </mx:Style>
+   <mx:VBox width="1000" height="700" verticalGap="0" horizontalGap="0" borderStyle="none">
+		<timeline:Timeline id="timeline" width="1000" height="150"/>
+		<display:TrendAnimationComponent id="tac" width="1000" height="550" maxWidth="1000" maxHeight="550"/>
+   </mx:VBox>
+</mx:Application>
