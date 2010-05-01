@@ -8,6 +8,7 @@ package com.frankjania.twitteryear.twitter
 	import flash.net.URLRequest;
 	
 	import mx.core.Application;
+	import mx.core.FlexGlobals;
 	
 	public class TwitterTrendsLoader
 	{
@@ -33,11 +34,11 @@ package com.frankjania.twitteryear.twitter
 			}
 			trendsToDate.setTrends(trendsArray);
 			var tle:TrendsLoadedEvent = new TrendsLoadedEvent(TrendsLoadedEvent.LOADED, lines);
-			Application.application.dispatchEvent(tle);
+			FlexGlobals.topLevelApplication.dispatchEvent(tle);
 		}
 		
 		public function progressed(e:ProgressEvent):void{
-			Application.application.dispatchEvent(e);
+			FlexGlobals.topLevelApplication.dispatchEvent(e);
 		}
 	}
 }

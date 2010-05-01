@@ -20,6 +20,7 @@ package com.frankjania.twitteryear.display
 	
 	import mx.controls.ProgressBar;
 	import mx.core.Application;
+	import mx.core.FlexGlobals;
 	import mx.core.UIComponent;
 	import mx.effects.Effect;
 	import mx.effects.Move;
@@ -68,9 +69,9 @@ package com.frankjania.twitteryear.display
 		public function TrendAnimationComponent():void{
 			super();
 			// Wait for the application to load so we know the width and height
-			Application.application.addEventListener( FlexEvent.APPLICATION_COMPLETE , creationCompleteHandler )
-			Application.application.addEventListener( TrendsLoadedEvent.LOADED , onTrendsLoaded );
-			Application.application.addEventListener( ProgressEvent.PROGRESS, progressed );
+			FlexGlobals.topLevelApplication.addEventListener( FlexEvent.APPLICATION_COMPLETE , creationCompleteHandler )
+			FlexGlobals.topLevelApplication.addEventListener( TrendsLoadedEvent.LOADED , onTrendsLoaded );
+			FlexGlobals.topLevelApplication.addEventListener( ProgressEvent.PROGRESS, progressed );
 
 			FontScaler.setScale(15, 40, 1, 24);
 //			FontScaler.setScale(20, 40, 72, 312);
@@ -82,7 +83,7 @@ package com.frankjania.twitteryear.display
             windowBuildingTimer = new Timer(Settings.build_timer_tick);
             windowBuildingTimer.addEventListener(TimerEvent.TIMER, onWindowBuildingTimer);
             
-			timeline = Application.application.timeline;
+			timeline = FlexGlobals.topLevelApplication.timeline;
 			timeline.addEventListener(TimelineEvent.SCRUB, onTimelineScrubbed);
 			timeline.addEventListener(TimelineEvent.SCRUBBING_DONE, onTimelineScrubbingDone);
 			graphics.drawRect(0,0,width,height);

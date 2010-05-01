@@ -13,6 +13,7 @@ package com.frankjania.twitteryear.timeline{
 	import flash.text.TextFormat;
 	
 	import mx.core.Application;
+	import mx.core.FlexGlobals;
 	import mx.core.UIComponent;
 	import mx.events.FlexEvent;
 
@@ -79,7 +80,7 @@ package com.frankjania.twitteryear.timeline{
 			fmt.font = "Verdana";
 			fmt.size = 10;
 			fmt.color = 0xf0f0f0;
-			Application.application.addEventListener( FlexEvent.APPLICATION_COMPLETE , creationCompleteHandler )
+			FlexGlobals.topLevelApplication.addEventListener( FlexEvent.APPLICATION_COMPLETE , creationCompleteHandler )
 		}
 		
 		private var dragging:Boolean = false;
