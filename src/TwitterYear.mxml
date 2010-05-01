@@ -3,7 +3,7 @@
 	xmlns:display="com.frankjania.twitteryear.display.*"
 	xmlns:timeline="com.frankjania.twitteryear.timeline.*"
 	pageTitle="A Year in Twitter Trends"
-	width="1000" height="700"
+	width="1300" height="700"
 	styleName="plain" backgroundColor="0xffffff"
 	verticalGap="0" horizontalGap="0"
 	>
@@ -24,8 +24,8 @@
 			advancedAntiAliasing: true;
 		}
     </mx:Style>
-   <mx:VBox width="1000" height="700" verticalGap="0" horizontalGap="0" borderStyle="none">
-		<timeline:Timeline id="timeline" width="1000" height="150"/>
-		<display:TrendAnimationComponent id="tac" width="1000" height="550" maxWidth="1000" maxHeight="550"/>
+   <mx:VBox width="1200" height="700" verticalGap="0" horizontalGap="0" borderStyle="none">
+		<timeline:Timeline id="timeline" width="1200" height="150"/>
+		<display:TrendAnimationComponent id="tac" width="1200" height="550" maxWidth="1200" maxHeight="550"/>
    </mx:VBox>
 </mx:Application>
